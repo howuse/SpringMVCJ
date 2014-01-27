@@ -1,0 +1,58 @@
+If you are using a spring version > 3.2.0, you no longer need to include specifically spring-asm since it has been included in spring-core.
+
+Remove spring-asm from your build definition and ensure that spring-core is there.
+
+---------------------------------------------------------------------------------------------
+http://randomallsorts.blogspot.com/2012/12/junit-411-whats-new-hamcrest-13.html : junit and hamcret
+------------------------------------------------------------------------------------------------------
+***JAVA****
+Note that in the case of reflection, you get an NoSuchMethodException, 
+while with non-reflective code,  you get  NoSuchMethodError.
+
+If you have access to change the JVM parameters, adding verbose output should allow you to see what classes are being loaded from what JARs.
+
+java -verbose:class <other args>
+-----------------------------------------------------------------------------------
+************************************GITHUB :****
+****************************************************
+Here is how you would do it in Windows (if you already have git installed).
+
+Open up a Windows command prompt.
+Change into the directory where your source code is located in the command prompt.
+First, create a new repository in this directory git init. This will say "Initialized empty git repository in ....git" (... is the path).
+Now you need to tell git about your files by adding them to your repository. Do this with git add filename. If you want to add all your files, you can do git add .
+Now that you have added your files and made your changes, you need to commit your changes so git can track them. Type git commit -m "adding files". -m lets you add the commit message in line.
+So far, the above steps is what you would do even if you were not using github. They are the normal steps to start a git repository. Remember that git is distributed (decentralized), means you don't need to have a "central server" (or even a network connection), to use git.
+
+Now you want to push the changes to your git repository hosted with github. To you this by telling git to add a remote location, and you do that with this command:
+
+git remote add origin https://github.com/yourusername/your-repo-name.git
+
+Once you have done that, git now knows about your remote repository. You can then tell it to push (which is "upload") your commited files:
+
+git push origin master
+--------------------------------------------------------------------
+update*******************
+**************************
+********************
+# clone the repository (from github, for example)
+git clone git@github.com:username/reponame.git
+cd reponame    
+
+# edit some files
+
+# add them to the index
+git add file1.txt
+git add file2.gif
+
+# review your changes
+git status    
+
+# commit the changes
+git commit -m "Decription of my change"
+
+# push them back to the remote repository
+git push origin master
+
+
+share|improve this answer
