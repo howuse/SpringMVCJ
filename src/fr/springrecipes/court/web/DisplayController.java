@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import fr.springrecipes.court.domain.Person;
 
 @Controller
-@RequestMapping("/welcome")
 public class DisplayController {
 	
 	static Logger log = Logger.getLogger(WelcomeController.class.getName());
@@ -25,7 +24,7 @@ public class DisplayController {
 	      model.addAttribute("sportName", person.getSport().getName());
 	      model.addAttribute("sportClub", person.getSport().getClub());
 	      log.info("##############Sport##########"+person.getSport().getName());
-	      return "display";
+	      return "personInfo";
 	   }
 
 }

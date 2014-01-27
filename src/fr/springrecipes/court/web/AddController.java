@@ -13,16 +13,15 @@ import fr.springrecipes.court.domain.Person;
 import fr.springrecipes.court.domain.Sport;
 
 @Controller
-@RequestMapping("/welcome")
 public class AddController {
 	
 	static Logger log = Logger.getLogger(WelcomeController.class.getName());
 	
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@RequestMapping(value="/add",method = RequestMethod.GET)
     public ModelAndView person() {
            
     //return new ModelAndView("add", "command", new Person());
-           ModelAndView mav = new ModelAndView("add");
+           ModelAndView mav = new ModelAndView("personForm");
            Map<String, String> pays = new HashMap<String, String>();
            pays.put("MAROC", "MAROC");
            pays.put("ALGERIE", "ALGERIE");
@@ -33,7 +32,7 @@ public class AddController {
         
            mav.addObject("paysMap", pays);
            mav.addObject("person", new Person(sport));
-           log.info("test du : http://localhost:8080/testspring/welcome/add");
+           log.info("test du : http://localhost:8080/SpringMVCJ/welcome/add");
            return mav;
 	  }
 

@@ -19,7 +19,6 @@ public class WelcomeControllerTest extends ControllerIntegrationTest {
 	   	 .andExpect(view().name("welcome"))
 	   	 .andExpect(model().attributeExists("today"));
 		
-	   	
 	}
 	
 	
