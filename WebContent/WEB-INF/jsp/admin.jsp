@@ -10,7 +10,7 @@
 <title>admin</title>
 </head>
 	<body>
-		<form method="post" action="admin/login">
+		<form method="post" action="">
 		    <table>
 			    <tr>
 			        <td><form:label path="person.nom" > LOGIN :</form:label></td>

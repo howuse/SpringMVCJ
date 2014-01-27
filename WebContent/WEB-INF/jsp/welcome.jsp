@@ -15,7 +15,7 @@
 la date d'Aujourdhui est :  <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />
 
 
-<c:url var="urlAjout" value="/welcome/add" ></c:url>
+<c:url var="urlAjout" value="/add" ></c:url>
 
 <a href="${urlAjout}" >Ajouter une personne</a>
 
